@@ -76,8 +76,12 @@
               your culinary senses!
             </p>
           </div>
-          <div class="col-12 col-sm align-self-center">
-            <img src="img/logo.png" alt="logo" class="img-fluid" />
+          <div class="col-12 col-sm-6">
+            <div class="row justify-content-center align-items-center">
+              <img src="img/logo.png" alt="logo" class="img-fluid col-12 col-md-6" />
+                <a href="#reserve" class="btn btn-sm bg-warning text-white d-flex align-self-center mt-2">Reserve Table</a></div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -88,7 +92,7 @@
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Our Lipsmacking Culinary Creations</h3>
         </div>
-        <div class="col col-sm order-sm-first col-md">
+        <div class="col-12 col-sm order-sm-first col-md">
           <div class="media">
             <img
               src="img/uthappizza.png"
@@ -109,22 +113,29 @@
           </div>
         </div>
       </div>
-
       <div class="row row-content align-items-center">
-        <div class="col-12 col-sm-4 col-md-3">
+        <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>This Month's Promotions</h3>
         </div>
-        <div class="col-12 col-sm">
-          <h2>Weekend Grand Buffet</h2>
-          <p>
-            Featuring mouthwatering combinations with a choice of five different
-            salads, six enticing appetizers, six main entrees and five choicest
-            desserts. Free flowing bubbly and soft drinks. All for just $19.99
-            per person
-          </p>
+        <div class="col-12 col-sm order-sm-last col-md">
+          <div class="media">
+            <img
+              src="img/buffet.png"
+              alt="buffet"
+              class="d-flex ml-3 img-thumbnail align-self-center"
+            />
+            <div class="media-body">
+              <h2>Weekend Grand Buffet <span class="badge badge-danger">New</span> </h2>
+              <p>
+                Featuring mouthwatering combinations with a choice of five different
+               salads, six enticing appetizers, six main entrees and five choicest
+              desserts. Free flowing bubbly and soft drinks. All for just $19.99
+              per person
+            </p>
+            </div>
+          </div>
         </div>
       </div>
-
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 col-md-3 order-sm-last">
           <h3>Meet our Culinary Specialists</h3>
@@ -148,6 +159,92 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row row-content">
+        <div class="col-sm-2"></div>
+        <div class="col-12 col-sm-8">
+          <div class="card">
+            <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+            <div class="card-body">
+              <form action="" id="reserve">
+              <div class="form-group row">
+                <label class="col-12 col-md-2" >Number of Guests</label>
+                <div class="col-md">
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio1"
+                      class="form-check-input"
+                    />
+                    <label for="radio1" class="form-check-label">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio2"
+                      class="form-check-input"
+                    />
+                    <label for="radio2" class="form-check-label">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio3"
+                      class="form-check-input"
+                    />
+                    <label for="radio3" class="form-check-label">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio4"
+                      class="form-check-input"
+                    />
+                    <label for="radio4" class="form-check-label">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio5"
+                      class="form-check-input"
+                    />
+                    <label for="radio5" class="form-check-label">5</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio6"
+                      class="form-check-input"
+                    />
+                    <label for="radio6" class="form-check-label">6</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="dateandtime" class="col-md-2">Date and Time</label>
+                <div class="col-md-3">
+                  <input type="input" name="date" id="datepicker" class="form-control input-group datepicker"onfocus="(this.type='date')" onblur="(this.type='text')" data-provide="datepicker" placeholder="Date">
+                </div>
+                <div class="offset-md-1 col-md-3">
+                  <input type="input" name="time" id="time" class="form-control time" placeholder="Time" onfocus="(this.type='time')" onblur="(this.type='text')">
+                </div>
+                </div>
+            
+              <div class="form-group row">
+                <button type="submit" class="btn btn-primary col-2 offset-2 col-md-2 offset-md-2">Reserve</button><div class="col-md-8"></div>
+              </div>
+             </form>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
       </div>
     </div>
 
