@@ -176,14 +176,29 @@
               </div>
               <div class="form-group row">
                 <label class="col-md-2">Section</label>
-                <div class="btn-group btn-group-toggle col-md" data-toggle="buttons">
+                <div
+                  class="btn-group btn-group-toggle col-md"
+                  data-toggle="buttons"
+                >
                   <label class="btn btn-success active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option1"
+                      autocomplete="off"
+                      checked
+                    />
+                    Non-Smoking
                   </label>
                   <label class="btn btn-danger">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option2"
+                      autocomplete="off"
+                    />
+                    Smoking
                   </label>
-                </div>
                 </div>
               </div>
               <div class="form-group row">
@@ -398,7 +413,7 @@
               <button class="btn btn-danger btn-sm" id="carousel-play">
                 <span class="fa fa-play"></span>
               </button>
-          </div>
+            </div>
           </div>
         </div>
       </div>
@@ -664,16 +679,15 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-      $(document).ready(function(){
-          $("#mycarousel").carousel( { interval: 2000 } );
-          $("#carousel-pause").click(function(){
-              $("#mycarousel").carousel('pause');
-          });
-          $("#carousel-play").click(function(){
-              $("#mycarousel").carousel('cycle');
-          });
+      $(document).ready(function () {
+        $("#mycarousel").carousel({ interval: 2000 });
+        $("#carousel-pause").click(function () {
+          $("#mycarousel").carousel("pause");
+        });
+        $("#carousel-play").click(function () {
+          $("#mycarousel").carousel("cycle");
+        });
       });
-  </script>
-
+    </script>
   </body>
 </html>
