@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <!-- login modal start -->
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <!-- Modal content-->
@@ -85,6 +86,149 @@
         </div>
       </div>
     </div>
+    <!-- login modal end -->
+
+    <!-- reserve table modal -->
+    <div
+      class="modal fade"
+      id="reservemodal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Reserve a Table
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="reserve">
+              <div class="form-group row">
+                <label class="col-12 col-md-2">Number of Guests</label>
+                <div class="col-md">
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio1"
+                      class="form-check-input"
+                    />
+                    <label for="radio1" class="form-check-label">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio2"
+                      class="form-check-input"
+                    />
+                    <label for="radio2" class="form-check-label">2</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio3"
+                      class="form-check-input"
+                    />
+                    <label for="radio3" class="form-check-label">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio4"
+                      class="form-check-input"
+                    />
+                    <label for="radio4" class="form-check-label">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio5"
+                      class="form-check-input"
+                    />
+                    <label for="radio5" class="form-check-label">5</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio6"
+                      class="form-check-input"
+                    />
+                    <label for="radio6" class="form-check-label">6</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2">Section</label>
+                <div class="btn-group btn-group-toggle col-md" data-toggle="buttons">
+                  <label class="btn btn-success active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                  </label>
+                  <label class="btn btn-danger">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                  </label>
+                </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="dateandtime" class="col-md-2">Date and Time</label>
+                <div class="col-md-4">
+                  <input
+                    type="input"
+                    name="date"
+                    id="datepicker"
+                    class="form-control input-group datepicker"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"
+                    data-provide="datepicker"
+                    placeholder="Date"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="input"
+                    name="time"
+                    id="time"
+                    class="form-control time"
+                    placeholder="Time"
+                    onfocus="(this.type='time')"
+                    onblur="(this.type='text')"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <button
+                  type="submit"
+                  class="btn btn-primary col-4 col-md-2 offset-md-2"
+                  style="margin-left: 19%;"
+                >
+                  Reserve
+                </button>
+                <div class="col-md-8"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- reserve table modal end -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
       <div class="container">
         <button
@@ -147,16 +291,14 @@
                 alt="logo"
                 class="img-fluid col-12 col-lg-6"
               />
-              <a
+              <button
                 role="button"
                 class="btn btn-block nav-link btn-warning col-lg-6"
-                data-toggle="tooltip"
-                data-html="true"
-                title="Or Call us at  <br><strong>+852 12345678</strong>"
-                data-placement="bottom"
-                href="#reserveform"
-                >Reserve Table</a
+                data-toggle="modal"
+                data-target="#reservemodal"
               >
+                Reserve Table
+              </button>
             </div>
           </div>
         </div>
@@ -249,6 +391,14 @@
             >
               <span class="carousel-control-next-icon"></span>
             </a>
+            <div class="btn-group" id="carouselButton">
+              <button class="btn btn-danger btn-sm" id="carousel-pause">
+                <span class="fa fa-pause"></span>
+              </button>
+              <button class="btn btn-danger btn-sm" id="carousel-play">
+                <span class="fa fa-play"></span>
+              </button>
+          </div>
           </div>
         </div>
       </div>
@@ -514,9 +664,16 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+      $(document).ready(function(){
+          $("#mycarousel").carousel( { interval: 2000 } );
+          $("#carousel-pause").click(function(){
+              $("#mycarousel").carousel('pause');
+          });
+          $("#carousel-play").click(function(){
+              $("#mycarousel").carousel('cycle');
+          });
       });
-    </script>
+  </script>
+
   </body>
 </html>
